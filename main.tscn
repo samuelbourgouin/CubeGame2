@@ -789,5 +789,4 @@ position = Vector2(204, 564)
 scale = Vector2(2, 2)
 
 [node name="palmTree left" parent="." instance=ExtResource("4_85ojq")]
-
-[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(115, 504)
