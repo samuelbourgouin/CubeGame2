@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c22wys4t7dnsd"]
+[gd_scene load_steps=7 format=3 uid="uid://c22wys4t7dnsd"]
 
 [ext_resource type="Texture2D" uid="uid://c7y0i2psdgs0y" path="res://Treasure Hunters/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Left 01.png" id="1_oem3p"]
 [ext_resource type="Texture2D" uid="uid://d3tuafvo1uvdv" path="res://Treasure Hunters/Palm Tree Island/Sprites/Back Palm Trees/Back Palm Tree Left 02.png" id="2_6a2xk"]
@@ -25,11 +25,20 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="palmTree left" type="Node2D"]
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_w3gne"]
+a = Vector2(-31, 1)
+b = Vector2(31, 1)
+
+[node name="palmTree left" type="StaticBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_7ugxl")
 autoplay = "default"
-frame_progress = 0.263775
+frame_progress = 0.726265
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(12, -49)
+shape = SubResource("SegmentShape2D_w3gne")
+one_way_collision = true
