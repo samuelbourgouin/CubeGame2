@@ -1,6 +1,6 @@
 extends Node
 
-@onready var coins_label = %CoinsLabel
+@onready var coins_label = %coinsLabel
 @onready var key_label = %keyLabel
 
 var coins = 0
@@ -14,4 +14,8 @@ func add_coin():
 func add_key():
 	key += 1
 	print(key)
+	key_label.text = "key : " + str(key)
+
+func remove_key(numberOfKey):
+	key -= numberOfKey
 	key_label.text = "key : " + str(key)
