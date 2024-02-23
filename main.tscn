@@ -855,6 +855,9 @@ position = Vector2(89, 578)
 scale = Vector2(2, 2)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+limit_left = 0
+limit_top = 0
+limit_bottom = 648
 
 [node name="gameManager" type="Node" parent="."]
 unique_name_in_owner = true
