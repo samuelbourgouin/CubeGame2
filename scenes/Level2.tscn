@@ -1,33 +1,18 @@
-<<<<<<< Updated upstream:scenes/Level2.tscn
-[gd_scene load_steps=13 format=3 uid="uid://7tit1o6ohqsk"]
+[gd_scene load_steps=13 format=3 uid="uid://bt3dfyiq8bvru"]
 
-[ext_resource type="Texture2D" uid="uid://7jr8giwfx6ov" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="1_f8ajm"]
-[ext_resource type="PackedScene" uid="uid://bymclkmu6wett" path="res://scenes/water_reflect_big.tscn" id="2_bdt5w"]
-[ext_resource type="Texture2D" uid="uid://e8kb7n80verv" path="res://Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="3_83pxp"]
-[ext_resource type="PackedScene" uid="uid://c22wys4t7dnsd" path="res://scenes/palm_tree_left.tscn" id="4_dsbke"]
-[ext_resource type="PackedScene" uid="uid://cfl0olm3fterk" path="res://scenes/plam_tree_regular.tscn" id="5_5wc0w"]
-[ext_resource type="PackedScene" uid="uid://cjovtrebh1eqn" path="res://scenes/main_character.tscn" id="6_6niln"]
-[ext_resource type="Script" path="res://scenes/game_manager.gd" id="7_fxw5a"]
-[ext_resource type="PackedScene" uid="uid://c2b4j5lka2ltn" path="res://scenes/coin.tscn" id="8_7smb2"]
-[ext_resource type="PackedScene" uid="uid://dqd7s7fmj03h7" path="res://scenes/chest.tscn" id="9_j1iua"]
-[ext_resource type="PackedScene" uid="uid://d31s54dtqu8u7" path="res://scenes/key.tscn" id="10_cmyca"]
-=======
-[gd_scene load_steps=13 format=3 uid="uid://c7343x0hkgpi3"]
-
-[ext_resource type="Texture2D" uid="uid://7jr8giwfx6ov" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="1_cpbsi"]
-[ext_resource type="PackedScene" uid="uid://cjovtrebh1eqn" path="res://scenes/main_character.tscn" id="1_r7f1k"]
-[ext_resource type="Texture2D" uid="uid://e8kb7n80verv" path="res://Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="2_2tib8"]
-[ext_resource type="PackedScene" uid="uid://c22wys4t7dnsd" path="res://scenes/palm_tree_left.tscn" id="4_85ojq"]
-[ext_resource type="PackedScene" uid="uid://bymclkmu6wett" path="res://scenes/water_reflect_big.tscn" id="5_ao6qe"]
-[ext_resource type="PackedScene" uid="uid://cfl0olm3fterk" path="res://scenes/plam_tree_regular.tscn" id="5_aur7g"]
-[ext_resource type="PackedScene" uid="uid://c2b4j5lka2ltn" path="res://scenes/coin.tscn" id="7_6xh30"]
-[ext_resource type="PackedScene" path="res://scenes/key.tscn" id="9_emnee"]
-[ext_resource type="Script" path="res://game_manager.gd" id="9_rdu3u"]
-[ext_resource type="PackedScene" path="res://scenes/chest.tscn" id="10_e5c41"]
->>>>>>> Stashed changes:main.tscn
+[ext_resource type="Texture2D" uid="uid://7jr8giwfx6ov" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="1_vts16"]
+[ext_resource type="PackedScene" uid="uid://bymclkmu6wett" path="res://scenes/water_reflect_big.tscn" id="2_3cjby"]
+[ext_resource type="Texture2D" uid="uid://e8kb7n80verv" path="res://Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="3_jggym"]
+[ext_resource type="PackedScene" uid="uid://c22wys4t7dnsd" path="res://scenes/palm_tree_left.tscn" id="4_e3yf2"]
+[ext_resource type="PackedScene" uid="uid://cfl0olm3fterk" path="res://scenes/plam_tree_regular.tscn" id="5_tkqje"]
+[ext_resource type="PackedScene" uid="uid://cjovtrebh1eqn" path="res://scenes/main_character.tscn" id="6_37007"]
+[ext_resource type="Script" path="res://scenes/game_manager.gd" id="7_v44fc"]
+[ext_resource type="PackedScene" uid="uid://c2b4j5lka2ltn" path="res://scenes/coin.tscn" id="8_h0bct"]
+[ext_resource type="PackedScene" uid="uid://dqd7s7fmj03h7" path="res://scenes/chest.tscn" id="9_okni5"]
+[ext_resource type="PackedScene" uid="uid://d31s54dtqu8u7" path="res://scenes/key.tscn" id="10_yhr3m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wnui"]
-texture = ExtResource("3_83pxp")
+texture = ExtResource("3_jggym")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -795,18 +780,18 @@ offset_right = 3416.0
 offset_bottom = 663.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_f8ajm")
+texture = ExtResource("1_vts16")
 
 [node name="background effect" type="Node2D" parent="."]
 position = Vector2(268, 474)
 
-[node name="water reflect big" parent="background effect" instance=ExtResource("2_bdt5w")]
+[node name="water reflect big" parent="background effect" instance=ExtResource("2_3cjby")]
 position = Vector2(-47, 11)
 
-[node name="water reflect big2" parent="background effect" instance=ExtResource("2_bdt5w")]
+[node name="water reflect big2" parent="background effect" instance=ExtResource("2_3cjby")]
 position = Vector2(593, 83)
 
-[node name="water reflect big3" parent="background effect" instance=ExtResource("2_bdt5w")]
+[node name="water reflect big3" parent="background effect" instance=ExtResource("2_3cjby")]
 position = Vector2(438, 13)
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -819,18 +804,18 @@ layer_0/tile_data = PackedInt32Array(983040, 262159, 1, 1048576, 262159, 2, 1114
 
 [node name="objects_trees" type="Node2D" parent="."]
 
-[node name="palmTree left" parent="objects_trees" instance=ExtResource("4_dsbke")]
+[node name="palmTree left" parent="objects_trees" instance=ExtResource("4_e3yf2")]
 position = Vector2(652, 202)
 
-[node name="plamTree regular" parent="objects_trees" instance=ExtResource("5_5wc0w")]
+[node name="plamTree regular" parent="objects_trees" instance=ExtResource("5_tkqje")]
 position = Vector2(1026, 545)
 
-[node name="plamTree regular2" parent="objects_trees" instance=ExtResource("5_5wc0w")]
+[node name="plamTree regular2" parent="objects_trees" instance=ExtResource("5_tkqje")]
 position = Vector2(1587, 544)
 
 [node name="collectables" type="Node2D" parent="."]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("6_6niln")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("6_37007")]
 position = Vector2(286, 562)
 scale = Vector2(2, 2)
 
@@ -843,7 +828,7 @@ limit_bottom = 648
 
 [node name="gameManager" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("7_fxw5a")
+script = ExtResource("7_v44fc")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -882,56 +867,41 @@ vertical_alignment = 1
 
 [node name="CoinGroup" type="Node" parent="."]
 
-[node name="coin" parent="CoinGroup" instance=ExtResource("8_7smb2")]
+[node name="coin" parent="CoinGroup" instance=ExtResource("8_h0bct")]
 position = Vector2(642, 588)
 
-[node name="coin2" parent="CoinGroup" instance=ExtResource("8_7smb2")]
+[node name="coin2" parent="CoinGroup" instance=ExtResource("8_h0bct")]
 position = Vector2(922, 430)
 
-[node name="coin3" parent="CoinGroup" instance=ExtResource("8_7smb2")]
+[node name="coin3" parent="CoinGroup" instance=ExtResource("8_h0bct")]
 position = Vector2(1026, 463)
 
-[node name="coin4" parent="CoinGroup" instance=ExtResource("8_7smb2")]
+[node name="coin4" parent="CoinGroup" instance=ExtResource("8_h0bct")]
 position = Vector2(1219, 592)
 
-[node name="coin5" parent="CoinGroup" instance=ExtResource("8_7smb2")]
+[node name="coin5" parent="CoinGroup" instance=ExtResource("8_h0bct")]
 position = Vector2(1831, 397)
 
-[node name="coin6" parent="CoinGroup" instance=ExtResource("8_7smb2")]
+[node name="coin6" parent="CoinGroup" instance=ExtResource("8_h0bct")]
 position = Vector2(1886, 396)
 
-[node name="coin7" parent="CoinGroup" instance=ExtResource("8_7smb2")]
+[node name="coin7" parent="CoinGroup" instance=ExtResource("8_h0bct")]
 position = Vector2(1944, 397)
 
-[node name="coin8" parent="CoinGroup" instance=ExtResource("8_7smb2")]
+[node name="coin8" parent="CoinGroup" instance=ExtResource("8_h0bct")]
 position = Vector2(1583, 453)
 
-[node name="coin9" parent="CoinGroup" instance=ExtResource("8_7smb2")]
+[node name="coin9" parent="CoinGroup" instance=ExtResource("8_h0bct")]
 position = Vector2(2104, 260)
 
-[node name="coin10" parent="CoinGroup" instance=ExtResource("8_7smb2")]
+[node name="coin10" parent="CoinGroup" instance=ExtResource("8_h0bct")]
 position = Vector2(2845, 264)
 
-[node name="coin11" parent="CoinGroup" instance=ExtResource("8_7smb2")]
+[node name="coin11" parent="CoinGroup" instance=ExtResource("8_h0bct")]
 position = Vector2(2485, 200)
 
-<<<<<<< Updated upstream:scenes/Level2.tscn
-[node name="chest" parent="." instance=ExtResource("9_j1iua")]
+[node name="chest" parent="." instance=ExtResource("9_okni5")]
 position = Vector2(3341, 576)
 
-[node name="key" parent="." instance=ExtResource("10_cmyca")]
+[node name="key" parent="." instance=ExtResource("10_yhr3m")]
 position = Vector2(3341, 381)
-=======
-[node name="finish" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="finish"]
-
-[node name="Sprite2D" type="Sprite2D" parent="finish"]
-position = Vector2(-1, 0)
-
-[node name="key" parent="." instance=ExtResource("9_emnee")]
-position = Vector2(3277, 394)
-
-[node name="chest" parent="." instance=ExtResource("10_e5c41")]
-position = Vector2(3258, 576)
->>>>>>> Stashed changes:main.tscn
