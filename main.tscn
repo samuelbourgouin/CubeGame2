@@ -774,10 +774,9 @@ sources/15 = SubResource("TileSetAtlasSource_7wnui")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
-offset_left = 26.0
-offset_top = 12.0
-offset_right = 3416.0
-offset_bottom = 663.0
+offset_left = 27.0
+offset_right = 3419.0
+offset_bottom = 672.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("1_cpbsi")
@@ -814,6 +813,9 @@ position = Vector2(1026, 545)
 position = Vector2(1587, 544)
 
 [node name="collectables" type="Node2D" parent="."]
+
+[node name="chest" parent="." instance=ExtResource("9_alu0q")]
+position = Vector2(3341, 576)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_r7f1k")]
 position = Vector2(286, 562)
@@ -900,8 +902,5 @@ position = Vector2(2845, 264)
 [node name="coin11" parent="CoinGroup" instance=ExtResource("7_6xh30")]
 position = Vector2(2485, 200)
 
-[node name="chest" parent="." instance=ExtResource("9_alu0q")]
-position = Vector2(3341, 576)
-
-[node name="key" parent="." instance=ExtResource("10_vtsr4")]
+[node name="key" parent="CoinGroup" instance=ExtResource("10_vtsr4")]
 position = Vector2(3341, 381)
