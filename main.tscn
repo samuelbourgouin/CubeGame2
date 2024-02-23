@@ -814,12 +814,14 @@ position = Vector2(1587, 544)
 [node name="collectables" type="Node2D" parent="."]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_r7f1k")]
-position = Vector2(89, 578)
+position = Vector2(286, 562)
 scale = Vector2(2, 2)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(-0.5, -1.5)
 limit_left = 0
 limit_top = 0
+limit_right = 3415
 limit_bottom = 648
 
 [node name="gameManager" type="Node" parent="."]
