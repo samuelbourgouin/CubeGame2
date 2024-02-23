@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:scenes/Level2.tscn
 [gd_scene load_steps=13 format=3 uid="uid://7tit1o6ohqsk"]
 
 [ext_resource type="Texture2D" uid="uid://7jr8giwfx6ov" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="1_f8ajm"]
@@ -10,6 +11,20 @@
 [ext_resource type="PackedScene" uid="uid://c2b4j5lka2ltn" path="res://scenes/coin.tscn" id="8_7smb2"]
 [ext_resource type="PackedScene" uid="uid://dqd7s7fmj03h7" path="res://scenes/chest.tscn" id="9_j1iua"]
 [ext_resource type="PackedScene" uid="uid://d31s54dtqu8u7" path="res://scenes/key.tscn" id="10_cmyca"]
+=======
+[gd_scene load_steps=13 format=3 uid="uid://c7343x0hkgpi3"]
+
+[ext_resource type="Texture2D" uid="uid://7jr8giwfx6ov" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="1_cpbsi"]
+[ext_resource type="PackedScene" uid="uid://cjovtrebh1eqn" path="res://scenes/main_character.tscn" id="1_r7f1k"]
+[ext_resource type="Texture2D" uid="uid://e8kb7n80verv" path="res://Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="2_2tib8"]
+[ext_resource type="PackedScene" uid="uid://c22wys4t7dnsd" path="res://scenes/palm_tree_left.tscn" id="4_85ojq"]
+[ext_resource type="PackedScene" uid="uid://bymclkmu6wett" path="res://scenes/water_reflect_big.tscn" id="5_ao6qe"]
+[ext_resource type="PackedScene" uid="uid://cfl0olm3fterk" path="res://scenes/plam_tree_regular.tscn" id="5_aur7g"]
+[ext_resource type="PackedScene" uid="uid://c2b4j5lka2ltn" path="res://scenes/coin.tscn" id="7_6xh30"]
+[ext_resource type="PackedScene" path="res://scenes/key.tscn" id="9_emnee"]
+[ext_resource type="Script" path="res://game_manager.gd" id="9_rdu3u"]
+[ext_resource type="PackedScene" path="res://scenes/chest.tscn" id="10_e5c41"]
+>>>>>>> Stashed changes:main.tscn
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wnui"]
 texture = ExtResource("3_83pxp")
@@ -900,8 +915,23 @@ position = Vector2(2845, 264)
 [node name="coin11" parent="CoinGroup" instance=ExtResource("8_7smb2")]
 position = Vector2(2485, 200)
 
+<<<<<<< Updated upstream:scenes/Level2.tscn
 [node name="chest" parent="." instance=ExtResource("9_j1iua")]
 position = Vector2(3341, 576)
 
 [node name="key" parent="." instance=ExtResource("10_cmyca")]
 position = Vector2(3341, 381)
+=======
+[node name="finish" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="finish"]
+
+[node name="Sprite2D" type="Sprite2D" parent="finish"]
+position = Vector2(-1, 0)
+
+[node name="key" parent="." instance=ExtResource("9_emnee")]
+position = Vector2(3277, 394)
+
+[node name="chest" parent="." instance=ExtResource("10_e5c41")]
+position = Vector2(3258, 576)
+>>>>>>> Stashed changes:main.tscn
