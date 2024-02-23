@@ -38,7 +38,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_0rxcj")
 }],
-"loop": true,
+"loop": false,
 "name": &"effect",
 "speed": 5.0
 }]
@@ -53,12 +53,11 @@ script = ExtResource("1_5js68")
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_3d8cq")
-animation = &"effect"
 autoplay = "default"
-frame_progress = 0.447517
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 1)
 shape = SubResource("CircleShape2D_6u4m2")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

@@ -5,7 +5,7 @@ extends Area2D
 
 func _on_body_entered(body):
 	if (body.name == "CharacterBody2D"):
-		game_manager.add_coin()
+		game_manager.add_key()
 		animated_sprite_2d.play("effect")
 
 func _on_animated_sprite_2d_animation_finished():

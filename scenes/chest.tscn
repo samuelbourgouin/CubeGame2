@@ -1,0 +1,71 @@
+[gd_scene load_steps=13 format=3 uid="uid://dqd7s7fmj03h7"]
+
+[ext_resource type="Script" path="res://scenes/chest.gd" id="1_47g7a"]
+[ext_resource type="Texture2D" uid="uid://dde6s3wcyibbi" path="res://Treasure Hunters/Merchant Ship/Sprites/Chest/Idle/1.png" id="1_kokv4"]
+[ext_resource type="Texture2D" uid="uid://bllaok3g8eyfu" path="res://Treasure Hunters/Merchant Ship/Sprites/Chest/Unlocked/1.png" id="2_h582p"]
+[ext_resource type="Texture2D" uid="uid://bcvwlqm7xvm3t" path="res://Treasure Hunters/Merchant Ship/Sprites/Chest/Unlocked/2.png" id="3_lqti7"]
+[ext_resource type="Texture2D" uid="uid://b2nywpxq5si6n" path="res://Treasure Hunters/Merchant Ship/Sprites/Chest/Unlocked/3.png" id="4_xaj3s"]
+[ext_resource type="Texture2D" uid="uid://dyumcwt5eprag" path="res://Treasure Hunters/Merchant Ship/Sprites/Chest/Unlocked/4.png" id="5_tmvsu"]
+[ext_resource type="Texture2D" uid="uid://b6otmkew0cyqn" path="res://Treasure Hunters/Merchant Ship/Sprites/Chest/Unlocked/5.png" id="6_ejbwr"]
+[ext_resource type="Texture2D" uid="uid://d4fl0krt73wqx" path="res://Treasure Hunters/Merchant Ship/Sprites/Chest/Unlocked/6.png" id="7_vyebx"]
+[ext_resource type="Texture2D" uid="uid://c3ox2hnbym4ul" path="res://Treasure Hunters/Merchant Ship/Sprites/Chest/Unlocked/7.png" id="8_28ady"]
+[ext_resource type="Texture2D" uid="uid://bej42vk0d2i5c" path="res://Treasure Hunters/Merchant Ship/Sprites/Chest/Unlocked/8.png" id="9_jsesy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_brgn5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kokv4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h582p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lqti7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xaj3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tmvsu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ejbwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vyebx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_28ady")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jsesy")
+}],
+"loop": false,
+"name": &"unlocked",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqjkt"]
+size = Vector2(60, 48)
+
+[node name="chest" type="Area2D"]
+script = ExtResource("1_47g7a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_brgn5")
+animation = &"unlocked"
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_qqjkt")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
