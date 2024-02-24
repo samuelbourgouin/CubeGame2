@@ -53,7 +53,10 @@ script = ExtResource("1_5js68")
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_3d8cq")
+animation = &"effect"
 autoplay = "default"
+frame = 2
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 1)

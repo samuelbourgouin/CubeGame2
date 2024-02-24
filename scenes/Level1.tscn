@@ -906,3 +906,6 @@ position = Vector2(2464, 200)
 
 [node name="key" parent="CoinGroup" instance=ExtResource("10_sietb")]
 position = Vector2(3303, 387)
+
+[node name="water reflect big" parent="." instance=ExtResource("2_6j282")]
+position = Vector2(1230, 493)
