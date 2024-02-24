@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://d2fd8eefywkp0"]
+
+[ext_resource type="Texture2D" uid="uid://bksea2i755txq" path="res://Treasure Hunters/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Tree Top 01.png" id="1_u8krw"]
+[ext_resource type="Texture2D" uid="uid://cisiprrmtbbo" path="res://Treasure Hunters/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Tree Top 02.png" id="2_mv2j4"]
+[ext_resource type="Texture2D" uid="uid://br0x1q3q4eh3j" path="res://Treasure Hunters/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Tree Top 03.png" id="3_ynd6w"]
+[ext_resource type="Texture2D" uid="uid://b3ffq4ixcnyhp" path="res://Treasure Hunters/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Tree Top 04.png" id="4_uvody"]
+[ext_resource type="Texture2D" uid="uid://374ioqdjaajs" path="res://Treasure Hunters/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Bottom and Grass (32x32).png" id="5_5fjbf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w0s3d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_u8krw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mv2j4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ynd6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uvody")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_6g8dn"]
+a = Vector2(-31, 1)
+b = Vector2(31, 1)
+
+[node name="FG palmTree regular" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_w0s3d")
+autoplay = "default"
+frame_progress = 0.93956
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -28)
+shape = SubResource("SegmentShape2D_6g8dn")
+one_way_collision = true
+
+[node name="FrontPalmBottomAndGrass(32x32)" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(3, 95)
+scale = Vector2(2, 2)
+texture = ExtResource("5_5fjbf")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 63)

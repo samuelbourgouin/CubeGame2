@@ -31,7 +31,7 @@ animations = [{
 a = Vector2(31, 1)
 b = Vector2(-31, 1)
 
-[node name="plamTree regular" type="StaticBody2D"]
+[node name="BG plamTree regular" type="StaticBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_yym8o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

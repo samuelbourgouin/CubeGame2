@@ -1,15 +1,18 @@
-[gd_scene load_steps=13 format=3 uid="uid://c7343x0hkgpi3"]
+[gd_scene load_steps=16 format=3 uid="uid://c7343x0hkgpi3"]
 
 [ext_resource type="Texture2D" uid="uid://7jr8giwfx6ov" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="1_0e5xb"]
 [ext_resource type="PackedScene" uid="uid://bymclkmu6wett" path="res://scenes/background/water_reflect_big.tscn" id="2_bqgvg"]
 [ext_resource type="Texture2D" uid="uid://e8kb7n80verv" path="res://Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="3_qmqs3"]
-[ext_resource type="PackedScene" uid="uid://c22wys4t7dnsd" path="res://scenes/background/palm_tree_left.tscn" id="4_c5rbn"]
-[ext_resource type="PackedScene" uid="uid://cfl0olm3fterk" path="res://scenes/background/plam_tree_regular.tscn" id="5_3qkgb"]
+[ext_resource type="PackedScene" uid="uid://c22wys4t7dnsd" path="res://scenes/background/BG_palm_tree_left.tscn" id="4_c5rbn"]
 [ext_resource type="PackedScene" uid="uid://dqd7s7fmj03h7" path="res://scenes/collectables/chest.tscn" id="6_kkpkh"]
 [ext_resource type="PackedScene" uid="uid://cjovtrebh1eqn" path="res://scenes/character/main_character.tscn" id="7_5ffx0"]
 [ext_resource type="Script" path="res://scenes/game_manager.gd" id="8_c8ur0"]
 [ext_resource type="PackedScene" uid="uid://c2b4j5lka2ltn" path="res://scenes/collectables/coin.tscn" id="9_hnxld"]
 [ext_resource type="PackedScene" uid="uid://d31s54dtqu8u7" path="res://scenes/collectables/key.tscn" id="10_wo2ta"]
+[ext_resource type="PackedScene" uid="uid://d2fd8eefywkp0" path="res://scenes/foreground decoration/FG_palm_tree_regular.tscn" id="11_w0ufm"]
+[ext_resource type="PackedScene" uid="uid://d2c323olu7m0p" path="res://scenes/foreground decoration/FG_palm_tree_left.tscn" id="12_bbmr7"]
+[ext_resource type="PackedScene" uid="uid://qb38srn0ifky" path="res://scenes/foreground decoration/FG_palm_tree_right.tscn" id="12_d7out"]
+[ext_resource type="PackedScene" uid="uid://bxwart2lmccst" path="res://scenes/foreground decoration/grass_1.tscn" id="13_bxsb0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wnui"]
 texture = ExtResource("3_qmqs3")
@@ -796,6 +799,12 @@ position = Vector2(593, 83)
 [node name="water reflect big3" parent="background effect" instance=ExtResource("2_bqgvg")]
 position = Vector2(438, 13)
 
+[node name="water reflect big4" parent="background effect" instance=ExtResource("2_bqgvg")]
+position = Vector2(962, 19)
+
+[node name="palmTree left" parent="background effect" instance=ExtResource("4_c5rbn")]
+position = Vector2(357, -267)
+
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 scale = Vector2(2, 2)
@@ -805,19 +814,79 @@ layer_0/tile_data = PackedInt32Array(983040, 262159, 1, 1048576, 262159, 2, 1114
 
 [node name="objects_trees" type="Node2D" parent="."]
 
-[node name="palmTree left" parent="objects_trees" instance=ExtResource("4_c5rbn")]
-position = Vector2(625, 207)
+[node name="grass20" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(991, 603)
 
-[node name="plamTree regular" parent="objects_trees" instance=ExtResource("5_3qkgb")]
-position = Vector2(1026, 545)
+[node name="grass19" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(1160, 603)
 
-[node name="plamTree regular2" parent="objects_trees" instance=ExtResource("5_3qkgb")]
-position = Vector2(1587, 544)
+[node name="grass18" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(1270, 603)
+
+[node name="grass17" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(1352, 603)
+
+[node name="grass16" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(1535, 603)
+
+[node name="grass15" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(1712, 603)
+
+[node name="grass14" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(542, 603)
+
+[node name="grass13" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(625, 603)
+
+[node name="grass12" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(685, 603)
+
+[node name="grass11" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(801, 603)
+
+[node name="grass10" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(2147, 603)
+
+[node name="grass9" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(2177, 603)
+
+[node name="grass8" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(2314, 603)
+
+[node name="grass7" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(2737, 603)
+
+[node name="grass6" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(2878, 603)
+
+[node name="grass5" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(2813, 603)
+
+[node name="grass4" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(3025, 603)
+
+[node name="grass3" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(3107, 603)
+
+[node name="grass2" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(3297, 603)
+
+[node name="grass" parent="objects_trees" instance=ExtResource("13_bxsb0")]
+position = Vector2(3218, 603)
+
+[node name="FG palmTree regular" parent="objects_trees" instance=ExtResource("11_w0ufm")]
+position = Vector2(1128, 497)
+
+[node name="FG palmTree left" parent="objects_trees" instance=ExtResource("12_bbmr7")]
+position = Vector2(977, 510)
+
+[node name="FG palmTree regular2" parent="objects_trees" instance=ExtResource("12_d7out")]
+position = Vector2(1710, 471)
 
 [node name="collectables" type="Node2D" parent="."]
 
 [node name="chest" parent="." instance=ExtResource("6_kkpkh")]
-position = Vector2(3303, 575)
+position = Vector2(3303, 576)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("7_5ffx0")]
 position = Vector2(286, 562)
@@ -878,10 +947,10 @@ position = Vector2(642, 588)
 position = Vector2(895, 425)
 
 [node name="coin3" parent="CoinGroup" instance=ExtResource("9_hnxld")]
-position = Vector2(1027, 458)
+position = Vector2(974, 452)
 
 [node name="coin4" parent="CoinGroup" instance=ExtResource("9_hnxld")]
-position = Vector2(1219, 592)
+position = Vector2(1212, 584)
 
 [node name="coin5" parent="CoinGroup" instance=ExtResource("9_hnxld")]
 position = Vector2(1795, 395)
@@ -893,7 +962,7 @@ position = Vector2(1859, 394)
 position = Vector2(1920, 395)
 
 [node name="coin8" parent="CoinGroup" instance=ExtResource("9_hnxld")]
-position = Vector2(1588, 454)
+position = Vector2(1708, 420)
 
 [node name="coin9" parent="CoinGroup" instance=ExtResource("9_hnxld")]
 position = Vector2(2075, 261)
@@ -906,6 +975,3 @@ position = Vector2(2464, 200)
 
 [node name="key" parent="CoinGroup" instance=ExtResource("10_wo2ta")]
 position = Vector2(3303, 387)
-
-[node name="water reflect big" parent="." instance=ExtResource("2_bqgvg")]
-position = Vector2(1230, 493)

@@ -29,7 +29,7 @@ animations = [{
 a = Vector2(-31, 1)
 b = Vector2(31, 1)
 
-[node name="palmTree right" type="StaticBody2D"]
+[node name="BG palmTree right" type="StaticBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
