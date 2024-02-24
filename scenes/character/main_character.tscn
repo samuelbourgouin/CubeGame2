@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://cjovtrebh1eqn"]
 
 [ext_resource type="Texture2D" uid="uid://cpe65ht5tjovc" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 01.png" id="1_k4sa8"]
-[ext_resource type="Script" path="res://scenes/main_character.gd" id="1_scpcc"]
+[ext_resource type="Script" path="res://scenes/character/main_character.gd" id="1_scpcc"]
 [ext_resource type="Texture2D" uid="uid://bvsdfe2udfum1" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 02.png" id="2_ujgjs"]
 [ext_resource type="Texture2D" uid="uid://csy6db82arkyk" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 03.png" id="3_bhily"]
 [ext_resource type="Texture2D" uid="uid://4hbuow72e5qu" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 04.png" id="4_v236y"]

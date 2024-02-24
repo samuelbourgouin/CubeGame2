@@ -1,11 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://picrafqi37bo"]
+[gd_scene load_steps=6 format=3 uid="uid://picrafqi37bo"]
 
 [ext_resource type="Texture2D" uid="uid://bhvh708ahdrea" path="res://Treasure Hunters/Pirate Ship/Sprites/Tilesets/Terrain and Back Wall (32x32).png" id="1_cto5o"]
-[ext_resource type="PackedScene" uid="uid://c2b4j5lka2ltn" path="res://scenes/coin.tscn" id="4_2wi6v"]
-[ext_resource type="PackedScene" uid="uid://d31s54dtqu8u7" path="res://scenes/key.tscn" id="5_pws58"]
-[ext_resource type="PackedScene" uid="uid://cjovtrebh1eqn" path="res://scenes/main_character.tscn" id="6_37007"]
-[ext_resource type="PackedScene" uid="uid://dqd7s7fmj03h7" path="res://scenes/chest.tscn" id="6_ehauu"]
-[ext_resource type="PackedScene" uid="uid://c22wys4t7dnsd" path="res://scenes/palm_tree_left.tscn" id="7_6mall"]
+[ext_resource type="PackedScene" uid="uid://cjovtrebh1eqn" path="res://scenes/character/main_character.tscn" id="6_37007"]
 [ext_resource type="Script" path="res://scenes/game_manager.gd" id="7_v44fc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gi135"]
@@ -1398,21 +1394,3 @@ theme_override_font_sizes/font_size = 30
 text = "key : 0"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="coin" parent="." instance=ExtResource("4_2wi6v")]
-position = Vector2(502, 482)
-
-[node name="coin2" parent="." instance=ExtResource("4_2wi6v")]
-position = Vector2(635, 549)
-
-[node name="coin3" parent="." instance=ExtResource("4_2wi6v")]
-position = Vector2(756, 544)
-
-[node name="key" parent="." instance=ExtResource("5_pws58")]
-position = Vector2(584, 537)
-
-[node name="chest" parent="." instance=ExtResource("6_ehauu")]
-position = Vector2(846, 539)
-
-[node name="palmTree left" parent="." instance=ExtResource("7_6mall")]
-position = Vector2(114, 417)
