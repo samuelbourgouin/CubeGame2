@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c7343x0hkgpi3"]
+[gd_scene load_steps=17 format=3 uid="uid://c7343x0hkgpi3"]
 
 [ext_resource type="Texture2D" uid="uid://7jr8giwfx6ov" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="1_0e5xb"]
 [ext_resource type="PackedScene" uid="uid://bymclkmu6wett" path="res://scenes/background/water_reflect_big.tscn" id="2_bqgvg"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cjovtrebh1eqn" path="res://scenes/character/main_character.tscn" id="7_5ffx0"]
 [ext_resource type="Script" path="res://scenes/game_manager.gd" id="8_c8ur0"]
 [ext_resource type="PackedScene" uid="uid://c2b4j5lka2ltn" path="res://scenes/collectables/coin.tscn" id="9_hnxld"]
+[ext_resource type="PackedScene" uid="uid://picrafqi37bo" path="res://scenes/levels/Level2.tscn" id="10_nbiqi"]
 [ext_resource type="PackedScene" uid="uid://d31s54dtqu8u7" path="res://scenes/collectables/key.tscn" id="10_wo2ta"]
 [ext_resource type="PackedScene" uid="uid://d2fd8eefywkp0" path="res://scenes/foreground decoration/FG_palm_tree_regular.tscn" id="11_w0ufm"]
 [ext_resource type="PackedScene" uid="uid://d2c323olu7m0p" path="res://scenes/foreground decoration/FG_palm_tree_left.tscn" id="12_bbmr7"]
@@ -773,7 +774,7 @@ texture = ExtResource("3_qmqs3")
 physics_layer_0/collision_layer = 1
 sources/15 = SubResource("TileSetAtlasSource_7wnui")
 
-[node name="Node" type="Node"]
+[node name="node" type="Node"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -805,8 +806,9 @@ position = Vector2(962, 19)
 [node name="palmTree left" parent="background effect" instance=ExtResource("4_c5rbn")]
 position = Vector2(357, -267)
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="background effect"]
 texture_filter = 1
+position = Vector2(-268, -474)
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_a8rkn")
 format = 2
@@ -887,9 +889,10 @@ position = Vector2(1710, 471)
 
 [node name="chest" parent="." instance=ExtResource("6_kkpkh")]
 position = Vector2(3303, 576)
+target_level = ExtResource("10_nbiqi")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("7_5ffx0")]
-position = Vector2(286, 562)
+position = Vector2(96, 582)
 scale = Vector2(2, 2)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]

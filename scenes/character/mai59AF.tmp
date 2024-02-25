@@ -132,7 +132,7 @@ script = ExtResource("1_scpcc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_t00cs")
-animation = &"ground_effect"
+animation = &"hit_ground"
 autoplay = "default"
 speed_scale = 0.5
 
@@ -140,5 +140,7 @@ speed_scale = 0.5
 position = Vector2(0, -0.75)
 shape = SubResource("RectangleShape2D_dejua")
 one_way_collision_margin = 0.0
+
+[node name="HitGroundTimer" type="Timer" parent="."]
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
