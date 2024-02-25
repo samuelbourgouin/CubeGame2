@@ -1,0 +1,47 @@
+[gd_scene load_steps=10 format=3 uid="uid://b40xphr5rj72g"]
+
+[ext_resource type="Texture2D" uid="uid://cim8j14t31ycn" path="res://Treasure Hunters/Pirate Ship/Sprites/Decorations/Chains/Small/01.png" id="1_adh7y"]
+[ext_resource type="Texture2D" uid="uid://c0cdkce123c4a" path="res://Treasure Hunters/Pirate Ship/Sprites/Decorations/Chains/Small/02.png" id="2_dh3qh"]
+[ext_resource type="Texture2D" uid="uid://t1hftfos5nvy" path="res://Treasure Hunters/Pirate Ship/Sprites/Decorations/Chains/Small/03.png" id="3_x76wd"]
+[ext_resource type="Texture2D" uid="uid://ccg52pk3j23ao" path="res://Treasure Hunters/Pirate Ship/Sprites/Decorations/Chains/Small/04.png" id="4_2exuq"]
+[ext_resource type="Texture2D" uid="uid://cuimbqxyhmmgs" path="res://Treasure Hunters/Pirate Ship/Sprites/Decorations/Chains/Small/05.png" id="5_vsxsn"]
+[ext_resource type="Texture2D" uid="uid://blwq7ld3uihg" path="res://Treasure Hunters/Pirate Ship/Sprites/Decorations/Chains/Small/06.png" id="6_eijcu"]
+[ext_resource type="Texture2D" uid="uid://bmkm18v1qb4eo" path="res://Treasure Hunters/Pirate Ship/Sprites/Decorations/Chains/Small/07.png" id="7_fhcso"]
+[ext_resource type="Texture2D" uid="uid://cobplel7emtvu" path="res://Treasure Hunters/Pirate Ship/Sprites/Decorations/Chains/Small/08.png" id="8_2dece"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0gdb8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_adh7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dh3qh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_x76wd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2exuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vsxsn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_eijcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fhcso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2dece")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="chains_small" type="AnimatedSprite2D"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_0gdb8")
+autoplay = "default"

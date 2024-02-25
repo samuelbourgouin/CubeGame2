@@ -1,0 +1,83 @@
+[gd_scene load_steps=16 format=3 uid="uid://b0e7ocqncshj5"]
+
+[ext_resource type="Script" path="res://scenes/collectables/chest_gold.gd" id="1_iuvia"]
+[ext_resource type="Texture2D" uid="uid://modxtsx8va6w" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Close 05.png" id="2_ey3fo"]
+[ext_resource type="Texture2D" uid="uid://5crag6jxwg7a" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Close 06.png" id="3_yb10t"]
+[ext_resource type="Texture2D" uid="uid://c8xa6guwv1y01" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Close 07.png" id="4_wnflf"]
+[ext_resource type="Texture2D" uid="uid://dm4018upoei1s" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Close 08.png" id="5_r80tn"]
+[ext_resource type="Texture2D" uid="uid://cj7daogculoll" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Close 09.png" id="6_jv280"]
+[ext_resource type="Texture2D" uid="uid://2f0v1ibu4322" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Close 10.png" id="7_3e0lf"]
+[ext_resource type="Texture2D" uid="uid://mww65470blj" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Open 01.png" id="8_djeph"]
+[ext_resource type="Texture2D" uid="uid://c38hniyup8eeb" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Open 02.png" id="9_x8a36"]
+[ext_resource type="Texture2D" uid="uid://dqqxucuqd10w8" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Open 03.png" id="10_eea8e"]
+[ext_resource type="Texture2D" uid="uid://bleecyiu5qlo4" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Open 04.png" id="11_gcu5c"]
+[ext_resource type="Texture2D" uid="uid://cerkxcdov7lxy" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Open 05.png" id="12_bspvg"]
+[ext_resource type="Texture2D" uid="uid://bdudkm2i8jda3" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Chest/Chest Open 06.png" id="13_2ni3g"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i2tmv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ey3fo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yb10t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wnflf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r80tn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jv280")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3e0lf")
+}],
+"loop": false,
+"name": &"close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_djeph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_x8a36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_eea8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gcu5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_bspvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2ni3g")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_161c2"]
+size = Vector2(30, 25)
+
+[node name="chest_gold" type="Area2D"]
+monitorable = false
+script = ExtResource("1_iuvia")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_i2tmv")
+animation = &"open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 10)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_161c2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

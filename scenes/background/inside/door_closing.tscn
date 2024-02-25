@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://x5ix65haoy3o"]
+
+[ext_resource type="Texture2D" uid="uid://ds37ihpf8d2qe" path="res://Treasure Hunters/Pirate Ship/Sprites/Decorations/Door/Closing/01.png" id="1_i8rtc"]
+[ext_resource type="Texture2D" uid="uid://wfugb3gpwg2a" path="res://Treasure Hunters/Pirate Ship/Sprites/Decorations/Door/Closing/02.png" id="2_kklnk"]
+[ext_resource type="Texture2D" uid="uid://cb6p37fthmrwe" path="res://Treasure Hunters/Pirate Ship/Sprites/Decorations/Door/Closing/03.png" id="3_4im5f"]
+[ext_resource type="Texture2D" uid="uid://ml15xdpblrxw" path="res://Treasure Hunters/Pirate Ship/Sprites/Decorations/Door/Closing/04.png" id="4_xmcfg"]
+[ext_resource type="Texture2D" uid="uid://dgxyqbumlxvwv" path="res://Treasure Hunters/Pirate Ship/Sprites/Decorations/Door/Closing/05.png" id="5_p3vel"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8apdq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_i8rtc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kklnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4im5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xmcfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p3vel")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="door_closing" type="AnimatedSprite2D"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_8apdq")
+autoplay = "default"

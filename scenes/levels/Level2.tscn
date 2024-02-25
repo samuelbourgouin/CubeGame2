@@ -1,13 +1,25 @@
-[gd_scene load_steps=15 format=3 uid="uid://picrafqi37bo"]
+[gd_scene load_steps=27 format=3 uid="uid://picrafqi37bo"]
 
 [ext_resource type="Texture2D" uid="uid://bhvh708ahdrea" path="res://Treasure Hunters/Pirate Ship/Sprites/Tilesets/Terrain and Back Wall (32x32).png" id="1_cto5o"]
 [ext_resource type="Texture2D" uid="uid://c7o1bwyykttk8" path="res://Treasure Hunters/Pirate Ship/Sprites/Tilesets/Platforms (32x32).png" id="2_fin8w"]
-[ext_resource type="PackedScene" uid="uid://cml6drkkt38bp" path="res://scenes/foreground decoration/door_open.tscn" id="2_qe305"]
+[ext_resource type="PackedScene" uid="uid://cml6drkkt38bp" path="res://scenes/background/inside/door_open.tscn" id="2_qe305"]
+[ext_resource type="PackedScene" uid="uid://wkqkxtg0m467" path="res://scenes/background/inside/candel_light_1.tscn" id="6_1d5ig"]
 [ext_resource type="PackedScene" uid="uid://cjovtrebh1eqn" path="res://scenes/character/main_character.tscn" id="6_37007"]
 [ext_resource type="PackedScene" uid="uid://d31s54dtqu8u7" path="res://scenes/collectables/key.tscn" id="6_hpdvj"]
-[ext_resource type="PackedScene" uid="uid://dqd7s7fmj03h7" path="res://scenes/collectables/chest.tscn" id="7_p4y8t"]
 [ext_resource type="Script" path="res://scenes/game_manager.gd" id="7_v44fc"]
 [ext_resource type="PackedScene" uid="uid://bob12l264q4t5" path="res://scenes/levels/main_menu.tscn" id="8_6wxth"]
+[ext_resource type="PackedScene" uid="uid://dgactqg2f0rjv" path="res://scenes/background/inside/chains_big.tscn" id="9_4ul05"]
+[ext_resource type="PackedScene" uid="uid://b40xphr5rj72g" path="res://scenes/background/inside/chains_small.tscn" id="9_6dusq"]
+[ext_resource type="PackedScene" uid="uid://c3lr6mt1v6a2a" path="res://scenes/background/inside/barrel_side_stack.tscn" id="10_bll7r"]
+[ext_resource type="PackedScene" uid="uid://cmvxc4cs5kaqr" path="res://scenes/background/inside/barrel_standing.tscn" id="10_gau3h"]
+[ext_resource type="PackedScene" uid="uid://ce3d2gtuadsmc" path="res://scenes/background/inside/barrel_standing_stack.tscn" id="11_hctof"]
+[ext_resource type="PackedScene" uid="uid://bxq0notscgod6" path="res://scenes/background/inside/candel_light_2.tscn" id="13_we7mp"]
+[ext_resource type="PackedScene" uid="uid://bolqevjkk3cjr" path="res://scenes/background/inside/bottle_blue_side.tscn" id="16_s5w7h"]
+[ext_resource type="PackedScene" uid="uid://bt38i7tj3387w" path="res://scenes/background/inside/bottle_green_standing.tscn" id="17_jubyc"]
+[ext_resource type="PackedScene" uid="uid://cxhg3hvdlmqyh" path="res://scenes/background/inside/bottle_green_side.tscn" id="18_gsiej"]
+[ext_resource type="PackedScene" uid="uid://c2vddg42e0hjs" path="res://scenes/background/inside/bottle_blue_stanting.tscn" id="19_28253"]
+[ext_resource type="PackedScene" uid="uid://b0e7ocqncshj5" path="res://scenes/collectables/chest_gold.tscn" id="19_qj3q2"]
+[ext_resource type="PackedScene" uid="uid://b8dciqtpqty3s" path="res://scenes/background/inside/window.tscn" id="20_en8ma"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_v7hiw"]
 
@@ -1343,85 +1355,87 @@ texture = ExtResource("2_fin8w")
 2:2/0 = 0
 2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:2/0/physics_layer_0/angular_velocity = 0.0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7, 8, -7, 8, 7, -8, 7)
 2:2/0/physics_layer_0/polygon_0/one_way = true
 3:2/0 = 0
 3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:2/0/physics_layer_0/angular_velocity = 0.0
-3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7, 8, -7, 8, 7, -8, 7)
 3:2/0/physics_layer_0/polygon_0/one_way = true
 4:2/0 = 0
 4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:2/0/physics_layer_0/angular_velocity = 0.0
-4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7, 8, -7, 8, 7, -8, 7)
 4:2/0/physics_layer_0/polygon_0/one_way = true
 5:2/0 = 0
 5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:2/0/physics_layer_0/angular_velocity = 0.0
-5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7, 8, -7, 8, 7, -8, 7)
 5:2/0/physics_layer_0/polygon_0/one_way = true
 6:2/0 = 0
 6:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:2/0/physics_layer_0/angular_velocity = 0.0
-6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7, 8, -7, 8, 7, -8, 7)
 6:2/0/physics_layer_0/polygon_0/one_way = true
 7:2/0 = 0
 7:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:2/0/physics_layer_0/angular_velocity = 0.0
-7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7, 8, -7, 8, 7, -8, 7)
 7:2/0/physics_layer_0/polygon_0/one_way = true
 8:2/0 = 0
 8:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:2/0/physics_layer_0/angular_velocity = 0.0
-8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7, 8, -7, 8, 7, -8, 7)
 8:2/0/physics_layer_0/polygon_0/one_way = true
 9:2/0 = 0
 9:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:2/0/physics_layer_0/angular_velocity = 0.0
-9:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7, 8, -7, 8, 7, -8, 7)
 9:2/0/physics_layer_0/polygon_0/one_way = true
+2:4/next_alternative_id = 2
 2:4/0 = 0
 2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:4/0/physics_layer_0/angular_velocity = 0.0
-2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7, 8, -7, 8, 7, -8, 7)
 2:4/0/physics_layer_0/polygon_0/one_way = true
 3:4/0 = 0
 3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:4/0/physics_layer_0/angular_velocity = 0.0
-3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7, 8, -7, 8, 7, -8, 7)
 3:4/0/physics_layer_0/polygon_0/one_way = true
 4:4/0 = 0
 4:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:4/0/physics_layer_0/angular_velocity = 0.0
-4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7, 8, -7, 8, 7, -8, 7)
 4:4/0/physics_layer_0/polygon_0/one_way = true
 5:4/0 = 0
 5:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:4/0/physics_layer_0/angular_velocity = 0.0
-5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7, 8, -7, 8, 7, -8, 7)
 5:4/0/physics_layer_0/polygon_0/one_way = true
 6:4/0 = 0
 6:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:4/0/physics_layer_0/angular_velocity = 0.0
-6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7, 8, -7, 8, 7, -8, 7)
 6:4/0/physics_layer_0/polygon_0/one_way = true
 7:4/0 = 0
 7:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:4/0/physics_layer_0/angular_velocity = 0.0
-7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7, 8, -7, 8, 7, -8, 7)
 7:4/0/physics_layer_0/polygon_0/one_way = true
 8:4/0 = 0
 8:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:4/0/physics_layer_0/angular_velocity = 0.0
-8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7, 8, -7, 8, 7, -8, 7)
 8:4/0/physics_layer_0/polygon_0/one_way = true
 9:4/0 = 0
 9:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:4/0/physics_layer_0/angular_velocity = 0.0
-9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7, 8, -7, 8, 7, -8, 7)
 9:4/0/physics_layer_0/polygon_0/one_way = true
 
 [sub_resource type="TileSet" id="TileSet_j2wdg"]
+tile_size = Vector2i(16, 14)
 physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_tgpf0")
 sources/0 = SubResource("TileSetAtlasSource_cm7r8")
@@ -1446,10 +1460,75 @@ tile_set = SubResource("TileSet_j2wdg")
 format = 2
 layer_0/tile_data = PackedInt32Array(-65525, 131072, 4, -65524, 196608, 4, -65523, 262144, 4, -65522, 327680, 4, -65521, 393216, 4, -65520, 458752, 4, -196589, 131072, 2, -196588, 196608, 2, -196587, 262144, 2, -196586, 327680, 2, -196585, 393216, 2, -196584, 458752, 2)
 
+[node name="barrel_side_stack" parent="background" instance=ExtResource("10_bll7r")]
+position = Vector2(659, -115)
+
+[node name="barrel_standing" parent="background" instance=ExtResource("10_gau3h")]
+position = Vector2(382, -60)
+
+[node name="barrel_standing_stack" parent="background" instance=ExtResource("11_hctof")]
+position = Vector2(446, -61)
+
+[node name="candel_light1" parent="background" instance=ExtResource("6_1d5ig")]
+position = Vector2(29, -22)
+
+[node name="candel_light_2" parent="background" instance=ExtResource("13_we7mp")]
+position = Vector2(623, 32)
+
+[node name="candel_light2" parent="background" instance=ExtResource("6_1d5ig")]
+position = Vector2(952, -49)
+
+[node name="candel_light_3" parent="background" instance=ExtResource("13_we7mp")]
+position = Vector2(1241, 11)
+
+[node name="chains_small" parent="background" instance=ExtResource("9_6dusq")]
+position = Vector2(536, 18)
+
+[node name="chains_small2" parent="background" instance=ExtResource("9_6dusq")]
+position = Vector2(387, 24)
+
+[node name="chains_big" parent="background" instance=ExtResource("9_4ul05")]
+position = Vector2(788, -12)
+
+[node name="bottle_blue_side" parent="background" instance=ExtResource("16_s5w7h")]
+position = Vector2(516, -60)
+
+[node name="bottle_green_standing" parent="background" instance=ExtResource("17_jubyc")]
+position = Vector2(494, -60)
+
+[node name="bottle_green_side" parent="background" instance=ExtResource("18_gsiej")]
+position = Vector2(386, -102)
+flip_h = true
+
+[node name="bottle_blue_stanting" parent="background" instance=ExtResource("19_28253")]
+position = Vector2(714, -116)
+
+[node name="bottle_green_side2" parent="background" instance=ExtResource("18_gsiej")]
+position = Vector2(741, -116)
+
+[node name="door open" parent="background" instance=ExtResource("2_qe305")]
+position = Vector2(-120, 38)
+
+[node name="window" parent="background" instance=ExtResource("20_en8ma")]
+position = Vector2(182, -41)
+
+[node name="window2" parent="background" instance=ExtResource("20_en8ma")]
+position = Vector2(589, -37)
+
+[node name="window3" parent="background" instance=ExtResource("20_en8ma")]
+position = Vector2(893, -40)
+
+[node name="window4" parent="background" instance=ExtResource("20_en8ma")]
+position = Vector2(1132, -41)
+
+[node name="window5" parent="background" instance=ExtResource("20_en8ma")]
+position = Vector2(1386, -42)
+
 [node name="foreground" type="Node2D" parent="."]
 
-[node name="door open" parent="foreground" instance=ExtResource("2_qe305")]
-position = Vector2(148, 512)
+[node name="chest_gold" parent="foreground" instance=ExtResource("19_qj3q2")]
+position = Vector2(1578, 542)
+target_level = ExtResource("8_6wxth")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("6_37007")]
 position = Vector2(147, 542)
@@ -1463,6 +1542,9 @@ limit_right = 4160
 limit_bottom = 648
 
 [node name="collectables" type="Node2D" parent="."]
+
+[node name="key" parent="collectables" instance=ExtResource("6_hpdvj")]
+position = Vector2(1262, 517)
 
 [node name="gameManager" type="Node" parent="."]
 unique_name_in_owner = true
@@ -1504,10 +1586,3 @@ theme_override_font_sizes/font_size = 30
 text = "key : 0"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="key" parent="." instance=ExtResource("6_hpdvj")]
-position = Vector2(1262, 517)
-
-[node name="chest" parent="." instance=ExtResource("7_p4y8t")]
-position = Vector2(1556, 544)
-target_level = ExtResource("8_6wxth")

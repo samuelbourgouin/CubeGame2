@@ -1,10 +1,9 @@
 [gd_scene load_steps=17 format=3 uid="uid://c7343x0hkgpi3"]
 
 [ext_resource type="Texture2D" uid="uid://7jr8giwfx6ov" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="1_0e5xb"]
-[ext_resource type="PackedScene" uid="uid://bymclkmu6wett" path="res://scenes/background/water_reflect_big.tscn" id="2_bqgvg"]
+[ext_resource type="PackedScene" uid="uid://bymclkmu6wett" path="res://scenes/background/outside/water_reflect_big.tscn" id="2_bqgvg"]
 [ext_resource type="Texture2D" uid="uid://e8kb7n80verv" path="res://Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="3_qmqs3"]
-[ext_resource type="PackedScene" uid="uid://c22wys4t7dnsd" path="res://scenes/background/BG_palm_tree_left.tscn" id="4_c5rbn"]
-[ext_resource type="PackedScene" uid="uid://dqd7s7fmj03h7" path="res://scenes/collectables/chest.tscn" id="6_kkpkh"]
+[ext_resource type="PackedScene" uid="uid://c22wys4t7dnsd" path="res://scenes/background/outside/BG_palm_tree_left.tscn" id="4_c5rbn"]
 [ext_resource type="PackedScene" uid="uid://cjovtrebh1eqn" path="res://scenes/character/main_character.tscn" id="7_5ffx0"]
 [ext_resource type="Script" path="res://scenes/game_manager.gd" id="8_c8ur0"]
 [ext_resource type="PackedScene" uid="uid://c2b4j5lka2ltn" path="res://scenes/collectables/coin.tscn" id="9_hnxld"]
@@ -14,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://d2c323olu7m0p" path="res://scenes/foreground decoration/FG_palm_tree_left.tscn" id="12_bbmr7"]
 [ext_resource type="PackedScene" uid="uid://qb38srn0ifky" path="res://scenes/foreground decoration/FG_palm_tree_right.tscn" id="12_d7out"]
 [ext_resource type="PackedScene" uid="uid://bxwart2lmccst" path="res://scenes/foreground decoration/grass_1.tscn" id="13_bxsb0"]
+[ext_resource type="PackedScene" uid="uid://b0e7ocqncshj5" path="res://scenes/collectables/chest_gold.tscn" id="13_g2jqy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wnui"]
 texture = ExtResource("3_qmqs3")
@@ -887,8 +887,8 @@ position = Vector2(1710, 471)
 
 [node name="collectables" type="Node2D" parent="."]
 
-[node name="chest" parent="." instance=ExtResource("6_kkpkh")]
-position = Vector2(3303, 576)
+[node name="chest_gold" parent="." instance=ExtResource("13_g2jqy")]
+position = Vector2(3297, 575)
 target_level = ExtResource("10_nbiqi")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("7_5ffx0")]

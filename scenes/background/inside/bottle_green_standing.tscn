@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt38i7tj3387w"]
+
+[ext_resource type="Texture2D" uid="uid://b8qvgujsum5g0" path="res://Treasure Hunters/Pirate Ship/Sprites/Decorations/Barrels and Bottles/05.png" id="1_12gl7"]
+
+[node name="bottle_green_standing" type="Sprite2D"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_12gl7")

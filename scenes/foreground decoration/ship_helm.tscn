@@ -1,0 +1,63 @@
+[gd_scene load_steps=12 format=3 uid="uid://b7cd8ym7kxhyk"]
+
+[ext_resource type="Texture2D" uid="uid://dx6dfui8gdi8t" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Idle 01.png" id="1_scqxq"]
+[ext_resource type="Texture2D" uid="uid://cpy6qys2il44m" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Idle 02.png" id="2_qnff7"]
+[ext_resource type="Texture2D" uid="uid://bb1nb03d26wga" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Idle 03.png" id="3_arkgu"]
+[ext_resource type="Texture2D" uid="uid://dr1pwjngmd826" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Idle 04.png" id="4_xemcj"]
+[ext_resource type="Texture2D" uid="uid://cr54a8k6dro7b" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Idle 05.png" id="5_g3e40"]
+[ext_resource type="Texture2D" uid="uid://cmhcpapml0kmh" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Idle 06.png" id="6_7mpuw"]
+[ext_resource type="Texture2D" uid="uid://cvwxwg1tlb52r" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Turn 01.png" id="7_d2ova"]
+[ext_resource type="Texture2D" uid="uid://dm7adg3xupywe" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Turn 02.png" id="8_xtjdp"]
+[ext_resource type="Texture2D" uid="uid://cpowx4h57kuuq" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Turn 03.png" id="9_wu7qi"]
+[ext_resource type="Texture2D" uid="uid://bx0potl77omb2" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Turn 04.png" id="10_28s7x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_10cnj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_scqxq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qnff7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_arkgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xemcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g3e40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7mpuw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_d2ova")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xtjdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wu7qi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_28s7x")
+}],
+"loop": true,
+"name": &"turn",
+"speed": 5.0
+}]
+
+[node name="ship helm" type="AnimatedSprite2D"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_10cnj")
+animation = &"turn"
+autoplay = "idle"
+frame = 2
+frame_progress = 0.528386

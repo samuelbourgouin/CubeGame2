@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkemlgt3158ih"]
+
+[ext_resource type="Texture2D" uid="uid://cdpajun2qvppx" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Flag/Platform.png" id="1_a7fnd"]
+
+[node name="ship_platform" type="Sprite2D"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_a7fnd")

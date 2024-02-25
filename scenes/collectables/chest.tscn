@@ -55,6 +55,7 @@ animations = [{
 size = Vector2(60, 48)
 
 [node name="chest" type="Area2D"]
+monitorable = false
 script = ExtResource("1_47g7a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

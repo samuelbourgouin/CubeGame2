@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0ytr3oejuoci"]
+
+[ext_resource type="Texture2D" uid="uid://dclqxi0sk271t" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Spikes/Spikes.png" id="1_gt0d1"]
+
+[node name="spikes" type="Sprite2D"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_gt0d1")
