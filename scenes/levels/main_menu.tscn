@@ -1,9 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://bob12l264q4t5"]
+[gd_scene load_steps=7 format=3 uid="uid://bob12l264q4t5"]
 
 [ext_resource type="Script" path="res://scenes/levels/main_menu.gd" id="1_ajxln"]
+[ext_resource type="Texture2D" uid="uid://7jr8giwfx6ov" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="2_07sl1"]
+[ext_resource type="Shader" path="res://scenes/levels/scrolling.gdshader" id="3_fg8ya"]
+[ext_resource type="Texture2D" uid="uid://dbjgd2qmu6n47" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Big Clouds.png" id="4_r1jom"]
+[ext_resource type="PackedScene" uid="uid://6k3ia0xp8gj1" path="res://scenes/background/outside/small_cloud_1.tscn" id="5_m3tyr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r13bf"]
+shader = ExtResource("3_fg8ya")
 
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_ajxln")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_07sl1")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_r13bf")
+offset_top = 234.0
+offset_right = 576.0
+offset_bottom = 335.0
+scale = Vector2(2, 2)
+texture = ExtResource("4_r1jom")
+stretch_mode = 1
 
 [node name="title holder" type="Label" parent="."]
 anchors_preset = 8
@@ -49,6 +72,21 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "Level 2"
+
+[node name="smallCloud1" parent="." instance=ExtResource("5_m3tyr")]
+position = Vector2(174, 148)
+
+[node name="smallCloud2" parent="." instance=ExtResource("5_m3tyr")]
+position = Vector2(468, 58)
+
+[node name="smallCloud3" parent="." instance=ExtResource("5_m3tyr")]
+position = Vector2(875, 165)
+
+[node name="smallCloud4" parent="." instance=ExtResource("5_m3tyr")]
+position = Vector2(1064, 41)
+
+[node name="smallCloud5" parent="." instance=ExtResource("5_m3tyr")]
+position = Vector2(1314, 115)
 
 [connection signal="pressed" from="level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="level2" to="." method="_on_level_2_pressed"]
