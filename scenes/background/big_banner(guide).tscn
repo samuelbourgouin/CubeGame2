@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1ve2a5olis52"]
+
+[ext_resource type="Texture2D" uid="uid://davj3lfi1jmit" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Big Banner/Big Banner (guide).png" id="1_fc4l4"]
+[ext_resource type="Texture2D" uid="uid://crshjo25jxoqd" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Big Banner/24.png" id="2_pm7i7"]
+[ext_resource type="Texture2D" uid="uid://bkn4byaqwn3sx" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Big Banner/22.png" id="3_4u5oi"]
+[ext_resource type="Texture2D" uid="uid://c302wc20dssjx" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Big Banner/16.png" id="4_atlei"]
+[ext_resource type="Texture2D" uid="uid://b4ris8qg5talf" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Big Banner/20.png" id="5_fj6q0"]
+[ext_resource type="Texture2D" uid="uid://l2tookkig655" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Big Banner/32.png" id="6_8o4xn"]
+
+[node name="BigBanner(guide)" type="Sprite2D"]
+position = Vector2(383, 158)
+texture = ExtResource("1_fc4l4")
+
+[node name="24" type="Sprite2D" parent="."]
+position = Vector2(-233, 28)
+texture = ExtResource("2_pm7i7")
+
+[node name="22" type="Sprite2D" parent="."]
+position = Vector2(-233, -2)
+texture = ExtResource("3_4u5oi")
+
+[node name="16" type="Sprite2D" parent="."]
+position = Vector2(-233, -34)
+texture = ExtResource("4_atlei")
+
+[node name="20" type="Sprite2D" parent="."]
+position = Vector2(-233, -66)
+texture = ExtResource("5_fj6q0")
+
+[node name="32" type="Sprite2D" parent="."]
+position = Vector2(-265, -2)
+texture = ExtResource("6_8o4xn")
+
+[node name="33" type="Sprite2D" parent="."]
+position = Vector2(-265, -34)
+texture = ExtResource("6_8o4xn")

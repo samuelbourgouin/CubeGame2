@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d346tdy74ufpr"]
+
+[ext_resource type="Texture2D" uid="uid://qapwyta0l2vn" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/Small Cloud 3.png" id="1_morro"]
+[ext_resource type="Script" path="res://scenes/background/outside/small_cloud_3.gd" id="2_31l1v"]
+
+[node name="small_cloud_3" type="Sprite2D"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_morro")
+centered = false
+script = ExtResource("2_31l1v")
