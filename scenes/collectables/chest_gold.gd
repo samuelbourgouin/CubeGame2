@@ -9,7 +9,7 @@ extends Area2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
 func _on_body_entered(body):
-	if (body.name == "CharacterBody2D" && game_manager.key > 0):
+	if (body.name == "main_character" && game_manager.key > 0):
 		animated_sprite_2d.play("open")
 		game_manager.remove_key(1)
 		await get_tree().create_timer(2).timeout

@@ -3,6 +3,8 @@ extends Node
 @onready var coins_label = %coinsLabel
 @onready var key_label = %keyLabel
 
+var current_checkpoint : Checkpoint
+var player : main_character
 var coins = 0
 var key = 0
 
@@ -19,3 +21,7 @@ func add_key():
 func remove_key(numberOfKey):
 	key -= numberOfKey
 	key_label.text = "key : " + str(key)
+
+func respawn_player():
+	if current_checkpoint != null:
+		player.position = current_checkpoint.global_position

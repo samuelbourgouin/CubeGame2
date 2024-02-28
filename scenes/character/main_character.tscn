@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cjovtrebh1eqn"]
+[gd_scene load_steps=27 format=3 uid="uid://cjovtrebh1eqn"]
 
 [ext_resource type="Texture2D" uid="uid://cpe65ht5tjovc" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose with Sword/09-Idle Sword/Idle Sword 01.png" id="1_k4sa8"]
 [ext_resource type="Script" path="res://scenes/character/main_character.gd" id="1_scpcc"]
@@ -123,21 +123,31 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3uh1w"]
+height = 28.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dejua"]
 size = Vector2(24, 25.5)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="main_character" type="CharacterBody2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_scpcc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_t00cs")
-animation = &"ground_effect"
 autoplay = "default"
 speed_scale = 0.5
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.75)
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -2)
+shape = SubResource("CapsuleShape2D_3uh1w")
+one_way_collision_margin = 0.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_dejua")
 one_way_collision_margin = 0.0
 

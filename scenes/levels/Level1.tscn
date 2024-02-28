@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c7343x0hkgpi3"]
+[gd_scene load_steps=22 format=3 uid="uid://c7343x0hkgpi3"]
 
 [ext_resource type="Texture2D" uid="uid://7jr8giwfx6ov" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="1_0e5xb"]
 [ext_resource type="PackedScene" uid="uid://bymclkmu6wett" path="res://scenes/background/outside/water_reflect_big.tscn" id="2_bqgvg"]
@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://qb38srn0ifky" path="res://scenes/foreground decoration/FG_palm_tree_right.tscn" id="12_d7out"]
 [ext_resource type="PackedScene" uid="uid://bxwart2lmccst" path="res://scenes/foreground decoration/grass_1.tscn" id="13_bxsb0"]
 [ext_resource type="PackedScene" uid="uid://b0e7ocqncshj5" path="res://scenes/collectables/chest_gold.tscn" id="13_g2jqy"]
+[ext_resource type="PackedScene" uid="uid://cerk3x7uiwumf" path="res://scenes/interactable/flag.tscn" id="18_t12lq"]
+[ext_resource type="PackedScene" uid="uid://d0ytr3oejuoci" path="res://scenes/traps/spikes.tscn" id="19_y3r2h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wnui"]
 texture = ExtResource("3_qmqs3")
@@ -806,9 +808,6 @@ position = Vector2(438, 13)
 [node name="water reflect big4" parent="background effect" instance=ExtResource("2_bqgvg")]
 position = Vector2(962, 19)
 
-[node name="palmTree left" parent="background effect" instance=ExtResource("4_c5rbn")]
-position = Vector2(357, -267)
-
 [node name="water reflect big5" parent="background effect" instance=ExtResource("2_bqgvg")]
 position = Vector2(1289, 86)
 
@@ -829,9 +828,6 @@ position = Vector2(2623, 89)
 
 [node name="small_cloud_3" parent="background effect" instance=ExtResource("4_rw8k8")]
 position = Vector2(210, -116)
-
-[node name="small_cloud_4" parent="background effect" instance=ExtResource("4_rw8k8")]
-position = Vector2(3129, -166)
 
 [node name="small_cloud_5" parent="background effect" instance=ExtResource("4_rw8k8")]
 position = Vector2(496, -192)
@@ -864,13 +860,76 @@ position = Vector2(436, -359)
 position = Vector2(257, -424)
 
 [node name="smallCloud5" parent="background effect" instance=ExtResource("6_j4pm2")]
-position = Vector2(197, -362)
+position = Vector2(169, -346)
 
 [node name="smallCloud6" parent="background effect" instance=ExtResource("6_j4pm2")]
-position = Vector2(10, -419)
+position = Vector2(-18, -403)
 
 [node name="smallCloud7" parent="background effect" instance=ExtResource("6_j4pm2")]
-position = Vector2(-188, -390)
+position = Vector2(-216, -374)
+
+[node name="smallCloud8" parent="background effect" instance=ExtResource("6_j4pm2")]
+position = Vector2(1039, -322)
+
+[node name="smallCloud9" parent="background effect" instance=ExtResource("6_j4pm2")]
+position = Vector2(1189, -396)
+
+[node name="smallCloud10" parent="background effect" instance=ExtResource("6_j4pm2")]
+position = Vector2(1337, -334)
+
+[node name="smallCloud11" parent="background effect" instance=ExtResource("6_j4pm2")]
+position = Vector2(1457, -415)
+
+[node name="smallCloud12" parent="background effect" instance=ExtResource("6_j4pm2")]
+position = Vector2(1611, -332)
+
+[node name="smallCloud13" parent="background effect" instance=ExtResource("6_j4pm2")]
+position = Vector2(1806, -416)
+
+[node name="smallCloud14" parent="background effect" instance=ExtResource("6_j4pm2")]
+position = Vector2(1977, -325)
+
+[node name="smallCloud15" parent="background effect" instance=ExtResource("6_j4pm2")]
+position = Vector2(2188, -412)
+
+[node name="smallCloud16" parent="background effect" instance=ExtResource("6_j4pm2")]
+position = Vector2(2367, -330)
+
+[node name="small_cloud_4" parent="background effect" instance=ExtResource("5_1nwi2")]
+position = Vector2(894, -255)
+
+[node name="small_cloud_10" parent="background effect" instance=ExtResource("5_1nwi2")]
+position = Vector2(1204, -297)
+
+[node name="small_cloud_11" parent="background effect" instance=ExtResource("5_1nwi2")]
+position = Vector2(1424, -222)
+
+[node name="small_cloud_12" parent="background effect" instance=ExtResource("5_1nwi2")]
+position = Vector2(1797, -285)
+
+[node name="small_cloud_13" parent="background effect" instance=ExtResource("5_1nwi2")]
+position = Vector2(2161, -226)
+
+[node name="small_cloud_15" parent="background effect" instance=ExtResource("4_rw8k8")]
+position = Vector2(804, -117)
+
+[node name="small_cloud_16" parent="background effect" instance=ExtResource("4_rw8k8")]
+position = Vector2(1187, -169)
+
+[node name="small_cloud_17" parent="background effect" instance=ExtResource("4_rw8k8")]
+position = Vector2(1589, -117)
+
+[node name="small_cloud_18" parent="background effect" instance=ExtResource("4_rw8k8")]
+position = Vector2(2069, -117)
+
+[node name="small_cloud_19" parent="background effect" instance=ExtResource("4_rw8k8")]
+position = Vector2(2396, -117)
+
+[node name="small_cloud_20" parent="background effect" instance=ExtResource("4_rw8k8")]
+position = Vector2(1846, -192)
+
+[node name="small_cloud_14" parent="background effect" instance=ExtResource("5_1nwi2")]
+position = Vector2(2409, -268)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -950,17 +1009,66 @@ position = Vector2(977, 510)
 [node name="FG palmTree regular2" parent="objects_trees" instance=ExtResource("12_d7out")]
 position = Vector2(1710, 471)
 
+[node name="palmTree left" parent="objects_trees" instance=ExtResource("4_c5rbn")]
+position = Vector2(625, 207)
+
+[node name="interactables" type="Node2D" parent="."]
+
+[node name="checkpoint" parent="interactables" instance=ExtResource("18_t12lq")]
+position = Vector2(2489, 131)
+
+[node name="spikes" parent="interactables" instance=ExtResource("19_y3r2h")]
+position = Vector2(2373, 576)
+
+[node name="spikes2" parent="interactables" instance=ExtResource("19_y3r2h")]
+position = Vector2(2312, 576)
+
+[node name="spikes3" parent="interactables" instance=ExtResource("19_y3r2h")]
+position = Vector2(2251, 576)
+
+[node name="spikes4" parent="interactables" instance=ExtResource("19_y3r2h")]
+position = Vector2(2688, 576)
+
+[node name="spikes5" parent="interactables" instance=ExtResource("19_y3r2h")]
+position = Vector2(2750, 576)
+
+[node name="spikes6" parent="interactables" instance=ExtResource("19_y3r2h")]
+position = Vector2(2812, 576)
+
+[node name="spikes8" parent="interactables" instance=ExtResource("19_y3r2h")]
+position = Vector2(1732, 576)
+
+[node name="spikes9" parent="interactables" instance=ExtResource("19_y3r2h")]
+position = Vector2(1670, 576)
+
+[node name="spikes10" parent="interactables" instance=ExtResource("19_y3r2h")]
+position = Vector2(1608, 576)
+
+[node name="spikes11" parent="interactables" instance=ExtResource("19_y3r2h")]
+position = Vector2(834, 576)
+
+[node name="spikes12" parent="interactables" instance=ExtResource("19_y3r2h")]
+position = Vector2(772, 576)
+
+[node name="spikes13" parent="interactables" instance=ExtResource("19_y3r2h")]
+position = Vector2(960, 576)
+
+[node name="spikes14" parent="interactables" instance=ExtResource("19_y3r2h")]
+position = Vector2(1022, 576)
+
+[node name="checkpoint2" parent="interactables" instance=ExtResource("18_t12lq")]
+position = Vector2(520, 515)
+
 [node name="collectables" type="Node2D" parent="."]
 
 [node name="chest_gold" parent="." instance=ExtResource("13_g2jqy")]
 position = Vector2(3297, 575)
 target_level = ExtResource("10_nbiqi")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("7_5ffx0")]
+[node name="main_character" parent="." instance=ExtResource("7_5ffx0")]
 position = Vector2(96, 582)
-scale = Vector2(2, 2)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="main_character"]
 limit_left = 0
 limit_top = 0
 limit_right = 3392
