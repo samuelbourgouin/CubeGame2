@@ -1,0 +1,146 @@
+[gd_scene load_steps=22 format=3 uid="uid://c7wu2myc2lf1o"]
+
+[ext_resource type="Texture2D" uid="uid://bg5j7i31vvjd0" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Dust Particles/Fall 01.png" id="1_kioub"]
+[ext_resource type="Texture2D" uid="uid://brkeq3u5g0pv7" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Dust Particles/Jump 01.png" id="1_u8w44"]
+[ext_resource type="Texture2D" uid="uid://bcjrpqesw23fk" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Dust Particles/Fall 02.png" id="2_4lxp4"]
+[ext_resource type="Texture2D" uid="uid://dxoa0glijlkg" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Dust Particles/Jump 02.png" id="2_7wq8f"]
+[ext_resource type="Texture2D" uid="uid://5gqxf82rc5x7" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Dust Particles/Fall 03.png" id="3_8e8j5"]
+[ext_resource type="Texture2D" uid="uid://b8w55qvxfwx6e" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Dust Particles/Jump 03.png" id="3_p81lc"]
+[ext_resource type="Texture2D" uid="uid://c614s36ml0ud4" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Dust Particles/Fall 04.png" id="4_hje2e"]
+[ext_resource type="Texture2D" uid="uid://c7lwtued7dd3w" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Dust Particles/Jump 04.png" id="4_u8qgi"]
+[ext_resource type="Texture2D" uid="uid://dd1u4axmm8v8g" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Dust Particles/Jump 05.png" id="5_uqq73"]
+[ext_resource type="Texture2D" uid="uid://jfec0gj3at40" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Dust Particles/Fall 05.png" id="5_wyvyd"]
+[ext_resource type="Texture2D" uid="uid://b3d7ubyohrwr0" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Dust Particles/Jump 06.png" id="6_xvewm"]
+[ext_resource type="Texture2D" uid="uid://c4myfspxdiuqq" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Dust Particles/Run 01.png" id="7_qyrn5"]
+[ext_resource type="Texture2D" uid="uid://dq6m5r4qxmugs" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Dust Particles/Run 02.png" id="8_lbuff"]
+[ext_resource type="Texture2D" uid="uid://b86p48x5yaar5" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Dust Particles/Run 03.png" id="9_kci5i"]
+[ext_resource type="Texture2D" uid="uid://c2yi1xiumxqd6" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Dust Particles/Run 04.png" id="10_bhwe3"]
+[ext_resource type="Texture2D" uid="uid://cne3o60lsbvn6" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Dust Particles/Run 05.png" id="11_gtjml"]
+[ext_resource type="Script" path="res://scenes/character/dust.gd" id="17_iagdw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yloms"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kioub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4lxp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8e8j5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hje2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wyvyd")
+}],
+"loop": false,
+"name": &"ground_effect",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_u8w44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7wq8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p81lc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u8qgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uqq73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xvewm")
+}],
+"loop": false,
+"name": &"jumping_effect",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_qyrn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lbuff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kci5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bhwe3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gtjml")
+}],
+"loop": false,
+"name": &"running_effect",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_8iv0l"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.0980392)]
+}
+
+[sub_resource type="Animation" id="Animation_yxexe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5r0fd"]
+_data = {
+"RESET": SubResource("Animation_yxexe"),
+"fade": SubResource("Animation_8iv0l")
+}
+
+[node name="dust" type="AnimatedSprite2D"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_yloms")
+animation = &"running_effect"
+autoplay = "default"
+frame = 4
+frame_progress = 1.0
+script = ExtResource("17_iagdw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5r0fd")
+}
+autoplay = "fade"
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

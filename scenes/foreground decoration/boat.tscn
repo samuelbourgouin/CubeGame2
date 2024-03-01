@@ -1,0 +1,97 @@
+[gd_scene load_steps=17 format=3 uid="uid://bq3m4i13mhebo"]
+
+[ext_resource type="Texture2D" uid="uid://cbhcrueyv5oi" path="res://Treasure Hunters/Merchant Ship/Sprites/Ship/Sail/Wind/1.png" id="1_5uiur"]
+[ext_resource type="Texture2D" uid="uid://b872agh8rceqy" path="res://Treasure Hunters/Merchant Ship/Sprites/Ship/Sail/Wind/2.png" id="2_u8vfc"]
+[ext_resource type="Texture2D" uid="uid://84vum5itjkdw" path="res://Treasure Hunters/Merchant Ship/Sprites/Ship/Sail/Wind/3.png" id="3_034ge"]
+[ext_resource type="Texture2D" uid="uid://dfrjjuhe3i8ey" path="res://Treasure Hunters/Merchant Ship/Sprites/Ship/Sail/Wind/4.png" id="4_rvaeu"]
+[ext_resource type="Texture2D" uid="uid://c1t1mjcaa6byi" path="res://Treasure Hunters/Merchant Ship/Sprites/Ship/Ship/Idle/1.png" id="5_xpevi"]
+[ext_resource type="Texture2D" uid="uid://blp1r482rwoo1" path="res://Treasure Hunters/Merchant Ship/Sprites/Ship/Ship/Idle/2.png" id="6_ojqxe"]
+[ext_resource type="Texture2D" uid="uid://ctc3tq431xud5" path="res://Treasure Hunters/Merchant Ship/Sprites/Ship/Ship/Idle/3.png" id="7_0m0q4"]
+[ext_resource type="Texture2D" uid="uid://b7tb2uoihdh35" path="res://Treasure Hunters/Merchant Ship/Sprites/Ship/Ship/Idle/4.png" id="8_pb1hm"]
+[ext_resource type="Texture2D" uid="uid://sfn6p68fcxvf" path="res://Treasure Hunters/Merchant Ship/Sprites/Ship/Ship/Idle/5.png" id="9_cgqus"]
+[ext_resource type="Texture2D" uid="uid://cmstwx7raubnx" path="res://Treasure Hunters/Merchant Ship/Sprites/Ship/Ship/Idle/6.png" id="10_ymcry"]
+[ext_resource type="Texture2D" uid="uid://dchbliw08u7iy" path="res://Treasure Hunters/Merchant Ship/Sprites/Ship/Anchor/1.png" id="11_56a0s"]
+[ext_resource type="Texture2D" uid="uid://ol667epjugbp" path="res://Treasure Hunters/Merchant Ship/Sprites/Ship/Anchor/2.png" id="12_ul3qa"]
+[ext_resource type="PackedScene" uid="uid://dqofvcpncc3rn" path="res://scenes/foreground decoration/water_splash_behind.tscn" id="13_te45k"]
+[ext_resource type="PackedScene" uid="uid://ct8d1ea61iw2f" path="res://scenes/foreground decoration/water_splash_front.tscn" id="14_dtq5e"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gkody"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5uiur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_u8vfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_034ge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rvaeu")
+}],
+"loop": true,
+"name": &"wind",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kb81u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_xpevi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ojqxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0m0q4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pb1hm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cgqus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ymcry")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="boat" type="Node2D"]
+
+[node name="sail" type="AnimatedSprite2D" parent="."]
+position = Vector2(22, -50)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_gkody")
+animation = &"wind"
+autoplay = "wind"
+frame_progress = 0.626827
+
+[node name="ship" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 22)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_kb81u")
+autoplay = "default"
+frame_progress = 0.371323
+
+[node name="anchor" type="Sprite2D" parent="."]
+position = Vector2(-43, 45)
+scale = Vector2(2, 2)
+texture = ExtResource("11_56a0s")
+
+[node name="chain" type="Sprite2D" parent="."]
+position = Vector2(-43, 22)
+scale = Vector2(2, 2)
+texture = ExtResource("12_ul3qa")
+
+[node name="water splash behind" parent="." instance=ExtResource("13_te45k")]
+position = Vector2(-73, 21)
+frame_progress = 0.717224
+
+[node name="water splash front" parent="." instance=ExtResource("14_dtq5e")]
+position = Vector2(44, 21)
+frame_progress = 0.847186

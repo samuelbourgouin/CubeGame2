@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://dsomn15iyxlnr"]
+
+[ext_resource type="Texture2D" uid="uid://cfvsaxf32s5sg" path="res://Treasure Hunters/Merchant Ship/Sprites/Water/Reflexes 2/1.png" id="1_qje6n"]
+[ext_resource type="Texture2D" uid="uid://ciiljs22k4mws" path="res://Treasure Hunters/Merchant Ship/Sprites/Water/Reflexes 2/2.png" id="2_nex0i"]
+[ext_resource type="Texture2D" uid="uid://d4lefb8avavoe" path="res://Treasure Hunters/Merchant Ship/Sprites/Water/Reflexes 2/3.png" id="3_58j78"]
+[ext_resource type="Texture2D" uid="uid://xlfwry0glkn2" path="res://Treasure Hunters/Merchant Ship/Sprites/Water/Reflexes 2/4.png" id="4_edysw"]
+[ext_resource type="Texture2D" uid="uid://dhq5e5bg2orp0" path="res://Treasure Hunters/Merchant Ship/Sprites/Water/Reflexes 2/5.png" id="5_10q7k"]
+[ext_resource type="Texture2D" uid="uid://cqthmm8lnavxe" path="res://Treasure Hunters/Merchant Ship/Sprites/Water/Reflexes 2/6.png" id="6_27xx0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hatxl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qje6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_nex0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_58j78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_edysw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_10q7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_27xx0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="water_reflection_2" type="AnimatedSprite2D"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_hatxl")
+autoplay = "default"
+frame_progress = 0.290619

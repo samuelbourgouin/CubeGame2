@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bob12l264q4t5"]
+[gd_scene load_steps=17 format=3 uid="uid://bob12l264q4t5"]
 
 [ext_resource type="Script" path="res://scenes/levels/main_menu.gd" id="1_ajxln"]
 [ext_resource type="Texture2D" uid="uid://7jr8giwfx6ov" path="res://Treasure Hunters/Palm Tree Island/Sprites/Background/BG Image.png" id="2_07sl1"]
@@ -7,9 +7,37 @@
 [ext_resource type="PackedScene" uid="uid://6k3ia0xp8gj1" path="res://scenes/background/outside/small_cloud_1.tscn" id="5_m3tyr"]
 [ext_resource type="PackedScene" uid="uid://d346tdy74ufpr" path="res://scenes/background/outside/small_cloud_3.tscn" id="5_vqgmc"]
 [ext_resource type="PackedScene" uid="uid://bgea0whg6avfe" path="res://scenes/background/outside/small_cloud_2.tscn" id="6_saqfh"]
+[ext_resource type="PackedScene" uid="uid://bq3m4i13mhebo" path="res://scenes/foreground decoration/boat.tscn" id="8_7m26v"]
+[ext_resource type="PackedScene" uid="uid://bymclkmu6wett" path="res://scenes/background/outside/water_reflect_big.tscn" id="8_as3e6"]
+[ext_resource type="Texture2D" uid="uid://clm0bkcdqmd5v" path="res://Treasure Hunters/Merchant Ship/Sprites/Water/Water/Bottom/1.png" id="8_gvfw6"]
+[ext_resource type="PackedScene" uid="uid://6b4rc35gs6v" path="res://scenes/foreground decoration/water.tscn" id="9_u1h4q"]
+[ext_resource type="PackedScene" uid="uid://thhpdd7emjx6" path="res://scenes/foreground decoration/water_reflection_1.tscn" id="11_pybfa"]
+[ext_resource type="PackedScene" uid="uid://dsomn15iyxlnr" path="res://scenes/foreground decoration/water_reflection_2.tscn" id="12_g6p36"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r13bf"]
 shader = ExtResource("3_fg8ya")
+
+[sub_resource type="Animation" id="Animation_o1mej"]
+resource_name = "osciller"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(571, 500), Vector2(571, 495)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n47xb"]
+_data = {
+"osciller": SubResource("Animation_o1mej")
+}
 
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_ajxln")
@@ -83,16 +111,27 @@ scale = Vector2(2, 2)
 texture = ExtResource("4_r1jom")
 stretch_mode = 1
 
+[node name="water reflect back" type="Node2D" parent="."]
+
+[node name="water reflect big" parent="water reflect back" instance=ExtResource("8_as3e6")]
+position = Vector2(193, 487)
+
+[node name="water reflect big2" parent="water reflect back" instance=ExtResource("8_as3e6")]
+position = Vector2(559, 466)
+
+[node name="water reflect big3" parent="water reflect back" instance=ExtResource("8_as3e6")]
+position = Vector2(953, 485)
+
 [node name="title holder" type="Label" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -80.0
-offset_top = -11.5
-offset_right = 80.0
-offset_bottom = 11.5
+offset_left = -150.0
+offset_top = -82.0
+offset_right = 150.0
+offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
@@ -105,9 +144,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -221.0
-offset_top = 62.0
+offset_top = 1.0
 offset_right = -65.0
-offset_bottom = 124.0
+offset_bottom = 63.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
@@ -120,9 +159,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 75.0
-offset_top = 62.0
+offset_top = 1.0
 offset_right = 231.0
-offset_bottom = 124.0
+offset_bottom = 63.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
@@ -135,6 +174,71 @@ limit_left = 0
 limit_top = 0
 limit_right = 1152
 limit_bottom = 648
+
+[node name="boat" parent="." instance=ExtResource("8_7m26v")]
+position = Vector2(571, 498.242)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="boat"]
+libraries = {
+"": SubResource("AnimationLibrary_n47xb")
+}
+autoplay = "osciller"
+
+[node name="water" type="Node2D" parent="."]
+
+[node name="1" type="Sprite2D" parent="water"]
+position = Vector2(96, 617)
+scale = Vector2(2, 2)
+texture = ExtResource("8_gvfw6")
+
+[node name="2" type="Sprite2D" parent="water"]
+position = Vector2(288, 617)
+scale = Vector2(2, 2)
+texture = ExtResource("8_gvfw6")
+
+[node name="3" type="Sprite2D" parent="water"]
+position = Vector2(480, 617)
+scale = Vector2(2, 2)
+texture = ExtResource("8_gvfw6")
+
+[node name="4" type="Sprite2D" parent="water"]
+position = Vector2(672, 617)
+scale = Vector2(2, 2)
+texture = ExtResource("8_gvfw6")
+
+[node name="5" type="Sprite2D" parent="water"]
+position = Vector2(864, 617)
+scale = Vector2(2, 2)
+texture = ExtResource("8_gvfw6")
+
+[node name="6" type="Sprite2D" parent="water"]
+position = Vector2(1056, 617)
+scale = Vector2(2, 2)
+texture = ExtResource("8_gvfw6")
+
+[node name="water2" parent="water" instance=ExtResource("9_u1h4q")]
+position = Vector2(96, 553)
+
+[node name="water3" parent="water" instance=ExtResource("9_u1h4q")]
+position = Vector2(288, 553)
+
+[node name="water4" parent="water" instance=ExtResource("9_u1h4q")]
+position = Vector2(480, 553)
+
+[node name="water5" parent="water" instance=ExtResource("9_u1h4q")]
+position = Vector2(672, 553)
+
+[node name="water6" parent="water" instance=ExtResource("9_u1h4q")]
+position = Vector2(864, 553)
+
+[node name="water7" parent="water" instance=ExtResource("9_u1h4q")]
+position = Vector2(1056, 553)
+
+[node name="water_Reflection_1" parent="water" instance=ExtResource("11_pybfa")]
+position = Vector2(475, 561)
+
+[node name="water_reflection_2" parent="water" instance=ExtResource("12_g6p36")]
+position = Vector2(602, 561)
 
 [connection signal="pressed" from="level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="level2" to="." method="_on_level_2_pressed"]
